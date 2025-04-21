@@ -25,7 +25,6 @@ export default function Home() {
       });
     };
 
-    // Вешаем слушатель на все кнопки
     buttons.forEach(btn => btn.addEventListener('click', handleClick));
 
     return () => {
