@@ -1,3 +1,18 @@
+# PROJECT DESCRIPTION
+
+Главный блок сайта IT-Школы. 
+
+Features:
+- Адаптивность под разные устройства
+- Чистый, современный дизайн с акцентом на анимацию
+- Цветовая гамма: белый, синий (или бирюзовый) и оранжевый
+- Анимация робота 
+- Анимация сайта
+
+Extra Features:
+- Логотип сайта
+- Смена языка
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
