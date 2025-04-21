@@ -1,32 +1,35 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react';
 import NavBar from '../../components/navbar';
 import RobotEmbed from '../../components/robot/RobotEmbed';
 import './home.css';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router';
 
 export default function Home() {
+  const audioRef = useRef(null);
   const { t } = useTranslation();
-  const audio = new Audio('/assets/sounds/zapsplat_multimedia_button_click_bright_003_92100.mp3');
+
+  useEffect(() => {
+    audioRef.current = new Audio('/assets/sounds/zapsplat_multimedia_button_click_bright_003_92100.mp3');
+  }, []);
 
   useEffect(() => {
     const buttons = document.querySelectorAll('.button');
-    buttons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        audio.play().catch((err) => {
-          console.error('Не удалось воспроизвести звук:', err);
-        });
+
+    const handleClick = () => {
+      const audio = audioRef.current;
+      if (!audio) return;
+      audio.currentTime = 0;
+      audio.play().catch(err => {
+        console.error('Ошибка при воспроизведении звука:', err);
       });
-    });
+    };
+
+    // Вешаем слушатель на все кнопки
+    buttons.forEach(btn => btn.addEventListener('click', handleClick));
 
     return () => {
-      buttons.forEach((btn) => {
-        btn.removeEventListener('click', () => {
-          audio.play().catch((err) => {
-            console.error('Не удалось воспроизвести звук:', err);
-          });
-        });
-      });
+      buttons.forEach(btn => btn.removeEventListener('click', handleClick));
     };
   }, []);
 
