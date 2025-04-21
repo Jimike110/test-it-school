@@ -36,7 +36,7 @@
 <details>
   <summary>Нажмите, чтобы посмотреть GIF демонстрацию</summary>
 
-  ![Демонстрация работы главного блока](docs/demo.gif)
+  ![Демонстрация работы главного блока](/public/assets/images/demo.gif)
 </details>
 
 ---
@@ -45,7 +45,7 @@
 
 ### Требования
 
-- Node.js ≥ 14 и npm  
+- Node.js ≥ 20 и npm  
 - Git  
 
 ### Установка
