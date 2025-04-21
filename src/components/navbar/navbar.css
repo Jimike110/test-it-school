@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .navbar__brand { flex: 0 0 auto; }
+  .navbar__controls {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+  
+  .navbar__lang-label {
+    margin-right: var(--spacing-xs);
+  }
+  
+  .navbar__lang-switcher {
+    padding: var(--spacing-xs);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fafafa;
+    font: inherit;
+  }
+  
