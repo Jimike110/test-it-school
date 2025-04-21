@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/navbar';
 import RobotEmbed from '../../components/robot/RobotEmbed';
@@ -7,6 +7,28 @@ import { useTranslation } from 'react-i18next';
 
 export default function Home() {
   const { t } = useTranslation();
+  const audio = new Audio('/assets/sounds/zapsplat_multimedia_button_click_bright_003_92100.mp3');
+
+  useEffect(() => {
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        audio.play().catch((err) => {
+          console.error('Не удалось воспроизвести звук:', err);
+        });
+      });
+    });
+
+    return () => {
+      buttons.forEach((btn) => {
+        btn.removeEventListener('click', () => {
+          audio.play().catch((err) => {
+            console.error('Не удалось воспроизвести звук:', err);
+          });
+        });
+      });
+    };
+  }, []);
 
   return (
     <div className="home">
