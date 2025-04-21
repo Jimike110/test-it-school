@@ -1,85 +1,75 @@
-# PROJECT DESCRIPTION
+## Краткое описание
 
-Главный блок сайта IT-Школы. 
+Этот проект реализует **адаптивный и анимированный главный блок** сайта IT‑Школы, выполненный на React (Create React App). Он включает фирменный логотип, переключатель языка (с сохранением выбора в `localStorage`), призыв к действию «Запишитесь на пробное занятие» с кнопками **НАЧАТЬ** и **У МЕНЯ УЖЕ ЕСТЬ АККАУНТ**, а также оригинальную анимацию робота, воспроизводящуюся каждые 10 секунд (3 сек анимации + 7 сек статичного состояния) без мерцаний. Дизайн выдержан в бело‑бирюзово‑оранжевой гамме, с современной типографикой и полностью адаптивен под мобильные и десктоп‑устройства.
 
-Features:
-- Адаптивность под разные устройства
-- Чистый, современный дизайн с акцентом на анимацию
-- Цветовая гамма: белый, синий (или бирюзовый) и оранжевый
-- Анимация робота 
-- Анимация сайта
+---
 
-Extra Features:
-- Логотип сайта
-- Смена языка
+## Особенности
 
-# Getting Started with Create React App
+- **Брендинг**  
+  - Созданный мной логотип IT‑Школы в левом верхнем углу  
+  - Переключатель языка (RU/EN) в правом верхнем углу (Видно только на устройствах с большим экраном) 
+  - Автоопределение языка браузера и сохранение выбора в `localStorage`  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- **Основной контент**  
+  - Заголовок: «Запишитесь на пробное занятие в IT‑Школе»  
+  - Кнопка призыва к действию: **НАЧАТЬ**  
+  - Ссылка под кнопкой: **У МЕНЯ УЖЕ ЕСТЬ АККАУНТ**  
 
-## Available Scripts
+- **Анимация робота**  
+  - Плавная SVG‑анимация длительностью ~3 сек  
+  - После воспроизведения робот «замораживается» на 7 сек  
+  - Повторяется бесконечно с помощью двух `<object>`‑элементов для отсутствия мерцаний  
 
-In the project directory, you can run:
+- **Адаптивный дизайн**  
+  - Гибкая сетка и Flexbox для любых разрешений  
+  - Отзывчивые шрифты с помощью CSS‑функции `clamp()`  
 
-### `npm start`
+- **Интернационализация**  
+  - Мгновенная смена языка через `react-i18next`  
+  - Поддержка названий и кнопок на выбранном языке  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Демонстрация
 
-### `npm test`
+<details>
+  <summary>Нажмите, чтобы посмотреть GIF демонстрацию</summary>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  ![Демонстрация работы главного блока](docs/demo.gif)
+</details>
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Начало работы
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Требования
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js ≥ 14 и npm  
+- Git  
 
-### `npm run eject`
+### Установка
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/Jimike110/test-it-school.git
+cd test-it-school
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Запуск в режиме разработки
+```bash
+npm start
+```
+- Откроется http://localhost:3000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Сборка для продакшена
+```bash
+npm run build
+```
 
-## Learn More
+- Оптимизированные файлы в папке build/
+- Готово для деплоя на любой хостинг
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+_Тестовое задание выполнено к сроку 23.04.2025 для главного блока сайта IT‑Школы._
