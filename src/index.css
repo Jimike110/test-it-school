@@ -33,4 +33,9 @@ body,
   height: 100%;
   font-family: var(--font-family);
   overflow-x: hidden;
+  cursor: url(/public/assets/cursor/icons8-cursor.svg), auto;
+}
+
+button:hover, button:active, .button:hover, .button:active {
+  cursor: url(/public/assets/cursor/icons8-hand-cursor.svg), auto;
 }
