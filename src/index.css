@@ -1,10 +1,10 @@
 :root {
-  --color-primary: turquoise;
-  --color-primary-dark: rgb(42, 151, 140);
-  --color-primary-hover: rgb(94, 209, 197);
-  --color-secondary: white;
+  --color-primary: #40e0d0;
+  --color-primary-dark: #2a978c;
+  --color-primary-hover: #5ed1c5;
+  --color-secondary: #ffffff;
 
-  --color-link-text: orange;
+  --color-link-text: #ffa500;
   --color-link-border: #e5e5e5;
   --color-link-hover: #1cb0f6;
   --color-link-hover-bg: #ddf4ff;
