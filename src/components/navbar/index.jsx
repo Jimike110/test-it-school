@@ -17,7 +17,7 @@ export default function NavBar() {
     <nav className="navbar">
       <div className="container">
         <div className="navbar__brand">
-          <Link to="/">
+          <Link className='custom-cursor' to="/">
             <Image
               preview={false}
               src="/assets/images/logo.png"
